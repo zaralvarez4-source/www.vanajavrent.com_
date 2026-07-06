@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Van Java Rent - Katalog Motor</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:#0f1014;color:#fff}
+header{background:#151515;padding:35px;text-align:center;border-bottom:2px solid #d4af37}
+header h1{color:#d4af37}
+.container{max-width:1000px;margin:auto;padding:30px 20px}
+.back{color:#d4af37;text-decoration:none}
+input{width:100%;padding:15px;margin:20px 0;border:none;border-radius:12px;background:#1d1f25;color:#fff;font-size:16px}
+.card{display:flex;justify-content:space-between;align-items:center;background:#1a1b21;border:1px solid #2f313b;padding:20px;border-radius:16px;margin-bottom:15px;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:#d4af37;box-shadow:0 10px 25px rgba(212,175,55,.15)}
+h3{margin-bottom:8px}
+p{color:#d4af37;font-weight:700}
+.btn{background:#d4af37;color:#111;padding:12px 20px;border-radius:30px;text-decoration:none;font-weight:700}
+@media(max-width:700px){
+.card{flex-direction:column;align-items:flex-start;gap:15px}
+.btn{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🏍️ Katalog Motor Van Java Rent</h1>
+<p>Pilih kendaraan yang ingin Anda sewa</p>
+</header>
+
+<div class="container">
+
+<a class="back" href="index.html">← Kembali ke Beranda</a>
+
+<input type="text" id="search" placeholder="Cari motor...">
+
+<div id="list">
+<div class="card"><div><h3>🏍️ Honda Beat deluxe</h3><p>Rp120.000/ Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️ Mio sporty</h3><p>Rp75.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️ Honda Vario 125cc</h3><p>Rp170.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️ Honda Vario 160 ISS</h3><p>Rp190.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️ Honda PCX 160</h3><p>Rp200.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️ Honda Scoopy</h3><p>Rp120.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️ Yamaha Fazzio</h3><p>Rp150.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️ Honda CB150R</h3><p>Rp180.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️ stylo 160</h3><p>190.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️sonic 150 R</h3><p>80.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️ADV 160 ABS</h3><p>200.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️Scoopy</h3><p>150.000 / Hari</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+<div class="card"><div><h3>🏍️Vespa sprint 180cc</h3><p>300.000</p></div><a class="btn" href="booking.html">BOOKING</a></div>
+</div>
+
+
+</div>
+
+</div>
+
+<script>
+const search=document.getElementById('search');
+search.addEventListener('input',function(){
+ const key=this.value.toLowerCase();
+ document.querySelectorAll('.card').forEach(card=>{
+   card.style.display=card.innerText.toLowerCase().includes(key)?'flex':'none';
+ });
+});
+</script>
+
+</body>
+</html>
